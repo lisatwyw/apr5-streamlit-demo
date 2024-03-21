@@ -2,6 +2,7 @@
 import folium, geopy
 import streamlit as st
 from branca.element import Figure
+from pathlib import Path
 
 def map_loc( address ):
   '''
@@ -32,8 +33,12 @@ except Exception as e:
   print( e ) 
 
 st.title( 'My first web app' )
+
+f = 'readme.md'
+mkd = Path( f ).read_text()
+st.read_markdown_file( mkd )
+
 st.header( 'My favourite restaurant' )
 st.markdown("# Top heading")
 st.markdown("## Subheading")
-st.read_markdown_file( 'readme.md' )
 st.st_folium( a_map )
