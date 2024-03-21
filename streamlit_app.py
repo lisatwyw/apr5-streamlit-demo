@@ -40,12 +40,13 @@ st.markdown("## Subheading")
 
 default_addr = 'Stanley Park, Vancouver'   
 try:
-  address = st.text_area( 'Enter name of queried site for forecasts:', value=defautlt_addr )
+  address = st.text_area( 'Enter name of queried site for forecasts:', value=default_addr )
   fig, a_map, site_name = map_loc(address)
   st_folium( a_map )
 except:    
-  fig, a_map, site_name = map_loc(default_addr)
-  st_folium( a_map )
-except Exception as e:
-  print( e ) 
+  try:
+    fig, a_map, site_name = map_loc(default_addr)
+    st_folium( a_map )
+  except Exception as e:
+    print( e ) 
   
