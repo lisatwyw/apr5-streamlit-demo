@@ -34,7 +34,7 @@ except Exception as e:
 
 st.title( 'My first web app' )
 
-f = 'readme.md'
+f = 'README.md'
 mkd = Path( f ).read_text()
 st.read_markdown_file( mkd )
 
