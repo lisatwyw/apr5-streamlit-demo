@@ -34,13 +34,13 @@ f = 'README.md'
 mkd = Path( f ).read_text()
 st.markdown( mkd )
 
-st.header( 'My favourite restaurant' )
+st.header( 'My favourite places' )
 st.markdown("# Top heading")
 st.markdown("## Subheading")
 
 
 try:
-  address = 'Cactus Club, Downtown'
+  address = 'Stanley Park, Vancouver'
   fig, a_map, site_name = map_loc(address)
   st_folium( a_map )
 except Exception as e:
