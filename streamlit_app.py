@@ -36,7 +36,7 @@ st.title( 'My first web app' )
 
 f = 'README.md'
 mkd = Path( f ).read_text()
-st.read_markdown_file( mkd )
+st.markdown( mkd )
 
 st.header( 'My favourite restaurant' )
 st.markdown("# Top heading")
