@@ -13,16 +13,16 @@ def map_loc( address ):
   geolocator = geopy.geocoders.Nominatim(user_agent="3")
   location = geolocator.geocode( address )         
   lx,ly=location.longitude, location.latitude
-
+  #  If you pass coordinates as positional args, please make sure that the order is (latitude, longitude) or (y, x) in Cartesian terms.
   fig = Figure( width=400,height=200)
-  a_map = folium.Map(location = [lx,ly], zoom_start = 16)
+  a_map = folium.Map(location = [ly,lx], zoom_start = 16)
   
-  p  = geopy.point.Point(lx, ly)
+  p  = geopy.point.Point(ly, lx)
   
   gl = geopy.geocoders.Nominatim(user_agent="my_test") # Without the user_agent it raises a ConfigurationError.
   site = gl.reverse(p)
   site_name = site[0]
-  folium.Marker( location=[lx, ly], popup='Default popup Marker3',tooltip=site_name).add_to(m)
+  folium.Marker( location=[ly, lx], popup='Default popup Marker3',tooltip=site_name).add_to(m)
   fig.add_child(a_map)
   
   return fig, a_map, site_name
