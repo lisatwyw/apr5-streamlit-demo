@@ -27,11 +27,6 @@ def map_loc( address ):
   
   return fig, a_map, site_name
 
-try:
-  address = 'Cactus Club, Downtown'
-  fig, a_map, site_name = map_loc(address)
-except Exception as e:
-  print( e ) 
 
 st.title( 'My first web app' )
 
@@ -42,4 +37,12 @@ st.markdown( mkd )
 st.header( 'My favourite restaurant' )
 st.markdown("# Top heading")
 st.markdown("## Subheading")
-st_folium( a_map )
+
+
+try:
+  address = 'Cactus Club, Downtown'
+  fig, a_map, site_name = map_loc(address)
+  st_folium( a_map )
+except Exception as e:
+  print( e ) 
+  
