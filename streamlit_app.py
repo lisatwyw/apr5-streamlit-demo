@@ -22,7 +22,7 @@ def map_loc( address ):
   gl = geopy.geocoders.Nominatim(user_agent="my_test") # Without the user_agent it raises a ConfigurationError.
   site = gl.reverse(p)
   site_name = site[0]
-  folium.Marker( location=[ly, lx], popup='Default popup Marker3',tooltip=site_name).add_to(m)
+  folium.Marker( location=[ly, lx], popup='Default popup Marker3',tooltip=site_name).add_to(a_map)
   fig.add_child(a_map)
   
   return fig, a_map, site_name
