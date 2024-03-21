@@ -1,7 +1,7 @@
 # Demo
 
 - A demo web app designed for workshop participants
-- Prerequsits: None
+- **Prerequsits**: None
 
 <details>
 

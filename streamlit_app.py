@@ -3,6 +3,7 @@ import folium, geopy
 import streamlit as st
 from branca.element import Figure
 from pathlib import Path
+from streamlit_folium import st_folium, folium_static
 
 def map_loc( address ):
   '''
