@@ -40,7 +40,11 @@ st.markdown("## Subheading")
 
 
 try:
-  address = 'Stanley Park, Vancouver'
+  address = st.text_area( 'Enter name of queried site for forecasts:', value=address )
+  fig, a_map, site_name = map_loc(address)
+  st_folium( a_map )
+except:  
+  address = 'Stanley Park, Vancouver'   
   fig, a_map, site_name = map_loc(address)
   st_folium( a_map )
 except Exception as e:
