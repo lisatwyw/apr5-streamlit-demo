@@ -64,7 +64,7 @@ try:
   for c in df.columns:
     try:
       st.header( c )    
-      fig = px.hist(df[c])    
+      fig = px.histogram(df[c])    
       st.plotly_chart( fig )
     except Exception as e:
       st.write( e )
