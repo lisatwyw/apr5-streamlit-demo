@@ -5,3 +5,4 @@ geopy
 plotly
 polars
 streamlit_folium
+pandas 

@@ -6,6 +6,8 @@ from pathlib import Path
 from streamlit_folium import st_folium, folium_static
 import plotly.express as px
 import polars as pol
+import pandas as pd
+
 
 
 def map_loc( address ):
@@ -58,7 +60,7 @@ except:
 import pandas as pd
 file = st.file_uploader( 'Upload', type=['csv'] )
 try:      
-  df=pol.read_csv( file )
+  df=pd.read_csv( file )
   st.dataframe( df )
 
   for c in df.columns:
