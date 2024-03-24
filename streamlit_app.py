@@ -58,16 +58,18 @@ except:
 import pandas as pd
 file = st.file_uploader( 'Upload', type=['csv','xlsx'] )
 try:      
-    df=pol.read_csv( file )
-    st.dataframe( df )
+  df=pol.read_csv( file )
+  st.dataframe( df )
+
+  for c in df.columns:
+    try:
+      st.header( c )    
+      fig = px.hist(df[c])    
+      st.plotly_chart( fig )
+    except:
+      pass 
+
 except:
     df = None
 
 
-for c in dfs[1].columns:
-  try:
-    st.header( c )    
-    fig = px.hist(dfs[1][c])    
-    st.plotly_chart( fig )
-  except:
-    pass 
