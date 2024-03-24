@@ -4,6 +4,9 @@ import streamlit as st
 from branca.element import Figure
 from pathlib import Path
 from streamlit_folium import st_folium, folium_static
+import plotly.express as px
+import polars as pol
+
 
 def map_loc( address ):
   '''
@@ -50,3 +53,21 @@ except:
   except Exception as e:
     print( e ) 
   
+
+
+import pandas as pd
+file = st.file_uploader( 'Upload', type=['csv','xlsx'] )
+try:      
+    df=pol.read_csv( file )
+    st.dataframe( df )
+except:
+    df = None
+
+
+for c in dfs[1].columns:
+  try:
+    st.header( c )    
+    fig = px.hist(dfs[1][c])    
+    st.plotly_chart( fig )
+  except:
+    pass 
