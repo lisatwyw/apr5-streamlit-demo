@@ -56,7 +56,7 @@ except:
 
 
 import pandas as pd
-file = st.file_uploader( 'Upload', type=['csv','xlsx'] )
+file = st.file_uploader( 'Upload', type=['csv'] )
 try:      
   df=pol.read_csv( file )
   st.dataframe( df )
@@ -66,10 +66,10 @@ try:
       st.header( c )    
       fig = px.hist(df[c])    
       st.plotly_chart( fig )
-    except:
-      pass 
-
-except:
-    df = None
+    except Exception as e:
+      st.write( e )
+except Exception as e:
+  print(e)
+  df = None
 
 
