@@ -45,7 +45,13 @@ st.markdown("## Subheading")
 
 default_addr = 'Stanley Park, Vancouver'   
 try:
-  address = st.text_area( 'Enter name of queried site for forecasts:', value=default_addr )
+  address = st.text_area( 'Try entering name of your favourite place:', value=default_addr )
+  mkdwn='''
+  ### Suggestions 
+  <details> - University of British Columbia, Vancouver
+  </details>
+  '''
+  st.markdown( mkdwn )
   fig, a_map, site_name = map_loc(address)
   st_folium( a_map )
 except:    
