@@ -47,9 +47,10 @@ default_addr = 'Stanley Park, Vancouver'
 try:
   address = st.text_area( 'Try entering name of your favourite place:', value=default_addr )
   mkdwn='''
-  ### Suggestions 
-  <details> - University of British Columbia, Vancouver
-  </details>
+  ### Have you tried below?
+  - [x] Iron Dog Books, Vancouver
+  - [x] University of British Columbia, Vancouver
+  - [] Simon Fraser University, Vancouver
   '''
   st.markdown( mkdwn )
   fig, a_map, site_name = map_loc(address)
