@@ -27,7 +27,7 @@ def map_loc( address ):
   gl = geopy.geocoders.Nominatim(user_agent="my_test") # Without the user_agent it raises a ConfigurationError.
   site = gl.reverse(p)
   site_name = site[0]
-  folium.Marker( location=[ly, lx], popup='Default popup Marker3',tooltip=site_name).add_to(a_map)
+  folium.Marker( location=[ly, lx], popup=site_name,tooltip=site_name).add_to(a_map)
   fig.add_child(a_map)
   
   return fig, a_map, site_name
@@ -48,8 +48,9 @@ try:
   address = st.text_area( 'Try entering name of your favourite place:', value=default_addr )
   mkdwn='''
   ### Have you tried below?
-  - [ ] Simon Fraser University, Vancouver
-  - [x] Stanley Park, Vancouver
+  - [ ] Salmon N' Bannock, Vancouver
+  - [x] Simon Fraser University, Vancouver
+  - [ ] Stanley Park, Vancouver
   - [x] University of British Columbia, Vancouver
   
   '''
