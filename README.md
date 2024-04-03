@@ -1,5 +1,7 @@
 # Demo
 
+[Try out the app!](apr5-demo-app1.streamlit.app)
+
 - A demo web app designed for workshop participants
 - **Prerequisite**: None
 
