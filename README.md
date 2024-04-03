@@ -7,7 +7,7 @@
 
 <details>
 
-## Packages
+<summary>Packages</summary> 
 - ```folium```
 - ```branca```
 - ```geopy```
