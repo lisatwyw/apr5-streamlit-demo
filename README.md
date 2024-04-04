@@ -4,15 +4,12 @@
 
 - A demo web app designed for workshop participants
 - **Prerequisite**: None
-
-<details>
-
-<summary>Packages</summary> 
+ 
+## Packages  
 
 - ```folium```
 - ```branca```
 - ```geopy```
 - ```streamlit```
 
-
-</details>
+ 
