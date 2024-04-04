@@ -98,7 +98,7 @@ except Exception as e:
 
 
 html = '<br>' *1000
-st.components.v1.html(html,  scrolling=True, height=1000 )
+st.components.v1.html(html, height=1000 )
 st.header( 'Drum roll please...' )
 
 audio_file = open('data/drum-roll-sound-effect.mp3', 'rb')
