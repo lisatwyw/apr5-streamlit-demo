@@ -97,7 +97,7 @@ except Exception as e:
   df = None
 
 
-html = '<br>' *50
+html = '<br>' *500
 st.components.v1.html(html)
 st.header( 'Drum roll please...' )
 
