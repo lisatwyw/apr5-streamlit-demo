@@ -96,6 +96,9 @@ except Exception as e:
   print(e)
   df = None
 
+
+html = '<br>' *50
+st.components.v1.html(html)
 st.header( 'Drum roll please...' )
 
 audio_file = open('data/drum-roll-sound-effect.mp3', 'rb')
