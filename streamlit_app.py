@@ -97,3 +97,12 @@ except Exception as e:
   df = None
 
 
+license='License: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes.'
+print( license )
+
+audio_file = open('data/drum-roll-sound-effect.mp3', 'rb')
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format='audio/ogg')
+
+
+
