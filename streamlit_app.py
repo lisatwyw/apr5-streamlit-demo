@@ -1,4 +1,4 @@
-#    Copyright 2023 lisatwyw Lisa Y.W. Tang
+#    Copyright 2024 lisatwyw Lisa Y.W. Tang
 #
 #    Licensed under the Apache License, Version 2.0 (the "License");
 #    you may not use this file except in compliance with the License.
@@ -95,6 +95,11 @@ try:
 except Exception as e:
   print(e)
   df = None
+
+
+import streamlit.components.v1 as components
+
+# <iframe src="https://trinket.io/embed/python3/0ed6793529" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
 html = '<br>' *1000
