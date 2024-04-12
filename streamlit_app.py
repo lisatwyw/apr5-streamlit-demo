@@ -97,11 +97,6 @@ except Exception as e:
   df = None
 
 
-import streamlit.components.v1 as components
-components.iframe( "http://www.bccdc.ca/" )
-# <iframe src="https://trinket.io/embed/python3/0ed6793529" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-
 html = '<br>' *1000
 st.components.v1.html(html, height=1000 )
 st.header( 'Drum roll please...' )
