@@ -45,6 +45,7 @@ def map_loc( address ):
   return fig, a_map, site_name
 
 
+st.set_page_config(layout="wide")
 st.title( 'My first web app' )
 
 f = 'README.md'
@@ -60,11 +61,13 @@ try:
   address = st.text_area( 'Try entering name of your favourite place:', value=default_addr )
   mkdwn='''
   ### Have you tried below?
+  - [x] BCCDC
   - [ ] Salmon N' Bannock, Vancouver
   - [x] Simon Fraser University, Vancouver
   - [ ] Stanley Park, Vancouver
   - [x] University of British Columbia, Vancouver
-  
+  - [x] Vancouver General Hospital 
+    
   '''
   st.markdown( mkdwn )
   fig, a_map, site_name = map_loc(address)
@@ -72,7 +75,7 @@ try:
 except:    
   try:
     fig, a_map, site_name = map_loc(default_addr)
-    st_folium( a_map )
+    st_folium( a_map, width = 500, returned_objects=[] )
   except Exception as e:
     print( e ) 
   
