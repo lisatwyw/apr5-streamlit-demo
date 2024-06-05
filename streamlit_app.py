@@ -48,13 +48,12 @@ def map_loc( address ):
 st.set_page_config(layout="wide")
 st.title( 'My first web app' )
 
-f = 'README.md'
-mkd = Path( f ).read_text()
-st.markdown( mkd )
+f = 'README.md'; mkd = Path( f ).read_text(); st.markdown( mkd )
 
-st.header( 'My favourite places' )
-st.markdown("# Top heading")
-st.markdown("## Subheading")
+st.title( 'My favourite places' )
+
+#st.markdown("# Top heading")
+#st.markdown("## Subheading")
 
 default_addr = 'Iron Dog Books, Vancouver'
 try:
