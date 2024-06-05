@@ -74,7 +74,7 @@ try:
 except:    
   try:
     fig, a_map, site_name = map_loc(default_addr)
-    st_folium( a_map, width = 500, returned_objects=[] )
+    st_folium( a_map, width = 600, height=1200, returned_objects=[] )
   except Exception as e:
     print( e ) 
   
