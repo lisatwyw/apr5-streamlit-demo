@@ -53,7 +53,7 @@ f = 'README.md'; mkd = Path( f ).read_text(); st.markdown( mkd )
 st.title( 'My favourite places' )
 default_addr = 'Banana Leaf, Commercial Drive, Vancouver'
 default_addr = 'Kamei Broadway, Vancouver'
-default_addr = 'Iron Dog Books, Vancouver'
+# default_addr = 'Iron Dog Books, Vancouver'
 
 try:
   address = st.text_area( 'Try entering name of your favourite place:', value=default_addr )
